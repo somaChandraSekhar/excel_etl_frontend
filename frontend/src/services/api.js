@@ -1,7 +1,10 @@
 import axios from 'axios';
 
-const API_URL = 'http://localhost:8000/api';
+const API_URL = 'https://excel-etl.azurewebsites.net/api';
 
+// const API_URL = import.meta.env.PROD 
+//   ? 'https://your-backend-app-name.azurewebsites.net/api'  // Update with your actual backend URL
+//   : 'http://localhost:8000/api';
 const api = {
   // Company operations
   getCompanies: () => axios.get(`${API_URL}/companies/`),
